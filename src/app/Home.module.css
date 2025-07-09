@@ -1,0 +1,62 @@
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.hero {
+  text-align: center;
+  z-index: 1;
+}
+
+.title {
+  font-size: 5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 2rem;
+  color: var(--foreground);
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: row; /* Elementos en fila */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  gap: 2rem; /* Espacio entre la descripción y la imagen/video */
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 1000px; /* Limitar el ancho para mejor lectura */
+}
+
+.heroDescription {
+  flex: 1; /* Ocupa el espacio disponible */
+  text-align: left; /* Alinea el texto a la izquierda */
+  padding-right: 1rem; /* Espacio a la derecha de la descripción */
+}
+
+.heroMedia {
+  flex: 1; /* Ocupa el espacio disponible */
+  display: flex;
+  justify-content: center; /* Centra la imagen/video dentro de su contenedor */
+  align-items: center;
+}
+
+/* Media query para pantallas más pequeñas (ej. móviles) */
+@media (max-width: 768px) {
+  .heroContent {
+    flex-direction: column; /* Apilar elementos en pantallas pequeñas */
+  }
+
+  .heroDescription {
+    padding-right: 0;
+    text-align: center; /* Centrar texto en pantallas pequeñas */
+  }
+}

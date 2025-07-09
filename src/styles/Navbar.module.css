@@ -1,0 +1,41 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
+  background: rgba(10, 10, 10, 0.5);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  width: 95%;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid var(--primary);
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.links {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* Espacio entre los elementos */
+}
+
+.links li {
+  flex-shrink: 1;
+}
+
+.links a {
+  color: var(--foreground);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: var(--primary);
+}

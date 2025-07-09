@@ -1,0 +1,144 @@
+:root {
+  --background: #0a0a0a;
+  --foreground: #e0e0e0;
+  --primary: #00f0ff; /* Un azul cian brillante */
+  --secondary: #8a2be2; /* Un azul violeta */
+  --accent: #ff00ff; /* Un magenta brillante */
+  --text-light: #f0f0f0;
+  --text-dark: #333333;
+  --border-color: #333333;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Arial', sans-serif; /* Puedes cambiar esto por una fuente futurista */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary);
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* Otros estilos globales */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.card {
+  background-color: rgba(20, 20, 20, 0.7);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button {
+  background-color: var(--primary);
+  color: var(--background);
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--accent);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  background-color: rgba(30, 30, 30, 0.7);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  color: var(--foreground);
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder,
+textarea::placeholder {
+  color: var(--foreground);
+  opacity: 0.7;
+}
+
+/* Estilos para listas */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Estilos para formularios */
+form {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background-color: rgba(20, 20, 20, 0.7);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  margin-bottom: 1rem;
+}
+
+form button {
+  margin-top: 1rem;
+}
+
+/* Estilos para mensajes de error/éxito */
+.error {
+  color: red;
+  margin-top: 0.5rem;
+}
+
+.success {
+  color: green;
+  margin-top: 0.5rem;
+}
+
+.main-content-padding {
+  padding-top: 6rem; /* Valor por defecto para pantallas grandes */
+}
+
+@media (max-width: 768px) {
+  .main-content-padding {
+    padding-top: 8rem; /* Aumentado para tablets y dispositivos más pequeños */
+  }
+}

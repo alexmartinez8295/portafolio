@@ -1,0 +1,11 @@
+.page {
+  padding: 4rem 2rem;
+  padding-top: 8rem; /* Add padding to clear the fixed navbar */
+}
+
+.title {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 2rem;
+  text-align: center;
+}

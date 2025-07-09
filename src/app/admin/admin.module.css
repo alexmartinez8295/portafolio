@@ -1,0 +1,166 @@
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: rgba(15, 15, 15, 0.8);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
+  font-family: var(--font-roboto-mono)!important;
+}
+
+.heading {
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  text-shadow: 0 0 10px var(--primary);
+  font-family: var(--font-roboto-mono)!important;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.nav li a {
+  display: block;
+  background-color: var(--secondary);
+  color: var(--foreground);
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: bold;
+  text-align: center;
+  font-family: var(--font-roboto-mono)!important;
+}
+
+.nav li a:hover {
+  background-color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.form {
+  background-color: rgba(20, 20, 20, 0.7);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  font-family: var(--font-roboto-mono)!important;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="date"],
+.form textarea {
+  width: 100%; /* Ajustado a 100% */
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: rgba(30, 30, 30, 0.7);
+  border: 1px solid var(--primary);
+  border-radius: 5px;
+  color: var(--foreground);
+  font-size: 1rem;
+  outline: none; /* Elimina el contorno por defecto al enfocar */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-family: var(--font-roboto-mono)!important;
+}
+
+.form input[type="text"]:focus,
+.form input[type="email"]:focus,
+.form input[type="date"]:focus,
+.form textarea:focus {
+  border-color: var(--accent); /* Cambia el color del borde al enfocar */
+  box-shadow: 0 0 8px rgba(255, 0, 255, 0.5); /* Sombra al enfocar */
+}
+
+.form input[type="text"]::placeholder,
+.form input[type="email"]::placeholder,
+.form input[type="date"],
+.form textarea::placeholder {
+  color: var(--foreground);
+  opacity: 0.6;
+}
+
+.form button {
+  background-color: var(--primary);
+  color: var(--background);
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  margin-right: 10px;
+  box-shadow: 0 4px 8px rgba(0, 240, 255, 0.2); /* Sombra para botones */
+  font-family: var(--font-roboto-mono)!important;
+}
+
+.form button:hover {
+  background-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 0, 255, 0.4); /* Sombra más pronunciada al hacer hover */
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.listItem {
+  background-color: rgba(20, 20, 20, 0.7);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-family: var(--font-roboto-mono)!important;
+}
+
+.listItem:hover {
+  transform: translateY(-5px); /* Efecto de elevación al hacer hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra más grande al hacer hover */
+}
+
+.listItem h2 {
+  color: var(--primary);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.listItem p {
+  color: var(--foreground);
+  margin-bottom: 0.5rem;
+}
+
+.listItem button {
+  background-color: var(--secondary);
+  color: var(--foreground);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-right: 10px;
+  font-family: var(--font-roboto-mono)!important;
+}
+
+.listItem button:hover {
+  background-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.error {
+  color: red;
+  margin-top: 1rem;
+  text-align: center;
+}
