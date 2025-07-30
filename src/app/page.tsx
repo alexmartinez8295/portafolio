@@ -81,7 +81,7 @@ export default function Home() {
                 alt="Yo merengues 😎"
                 width={500} // Ajusta el tamaño según tus necesidades
                 height={500}
-                style={{ objectFit: 'cover', marginTop: '1rem' }}
+                style={{ objectFit: 'cover', marginTop: '1rem', borderRadius: '16px'}}
               />
             )}
             {homeContent.hero_video?.videoUrl && (
