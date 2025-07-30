@@ -1,5 +1,7 @@
 import { Roboto_Mono } from 'next/font/google';
 import Navbar from '../components/Navbar';
+import { AOSInit } from '../components/AOSInit';
+import { KonamiCodeDetector } from '../components/KonamiCodeDetector';
 import './globals.css';
 
 const robotoMono = Roboto_Mono({
@@ -21,6 +23,8 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="/assets/css/fontawesome-all.min.css" />
       </head>
       <body className={`${robotoMono.className} main-content-padding`}>
+        <KonamiCodeDetector />
+        <AOSInit />
         <Navbar />
         {children}
       </body>

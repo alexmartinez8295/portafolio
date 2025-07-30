@@ -46,16 +46,30 @@ const db = new sqlite3.Database(dbPath, (err) => {
         else console.log('Tabla experience creada o ya existe.');
       });
 
-      // Tabla de Forum Posts
-      db.run(`CREATE TABLE IF NOT EXISTS forum_posts (
+      // Tabla de Posts del Foro (anteriormente forum_posts)
+      db.run(`CREATE TABLE IF NOT EXISTS Posts (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         title TEXT NOT NULL,
         content TEXT,
-        author TEXT,
-        date TEXT
+        author TEXT DEFAULT 'Anónimo',
+        imageUrl TEXT, -- Para la imagen opcional
+        createdAt DATETIME DEFAULT CURRENT_TIMESTAMP
       )`, (err) => {
-        if (err) console.error('Error al crear la tabla forum_posts:', err.message);
-        else console.log('Tabla forum_posts creada o ya existe.');
+        if (err) console.error('Error al crear la tabla Posts:', err.message);
+        else console.log('Tabla Posts creada o ya existe.');
+      });
+
+      // Nueva Tabla de Comentarios
+      db.run(`CREATE TABLE IF NOT EXISTS Comments (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        post_id INTEGER NOT NULL,
+        content TEXT NOT NULL,
+        author TEXT DEFAULT 'Anónimo',
+        createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY (post_id) REFERENCES Posts(id) ON DELETE CASCADE
+      )`, (err) => {
+        if (err) console.error('Error al crear la tabla Comments:', err.message);
+        else console.log('Tabla Comments creada o ya existe.');
       });
 
       // Tabla de Mensajes de Contacto
